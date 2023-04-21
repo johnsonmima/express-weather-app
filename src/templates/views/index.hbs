@@ -1,0 +1,38 @@
+{{>header}}
+
+
+<main>
+  <div class="container py-2">
+ {{>navbar}}
+      <div class="bg-dark py-5 px-5 mb-5">
+    <h1 class="h1 fw-bolder display-1 text-center text-light pt-5">{{title}}</h1>
+
+      <p class="lead text-center text-light pt-1 mb-1" id="msg">{{caption}}</p>
+      </div>
+
+      <div class="text-center mb-1">
+          <button type="button" id="fetchWeatherBtn" class="btn btn-outline-dark">Get Current Weather <i class="bi bi-cloud-fill"></i></button>
+      </div>
+      
+      <div class="text-center" id="content">
+        <img alt="profile" src="./assets/images/weather.png" width="400" height="400" class="img-fluid rounded" />
+      </div>
+
+
+      <div id="resultContent" style="display: none;">
+      <div class="d-flex flex-column align-items-center py-5" >
+        <p id="dateID" class="lead text-dark"></p>
+        <p id="timeID" class="text-dark fw-bold fs-2"></p>
+        <p id="locationID" class="text-dark lead"></p>
+        <p id="iconID"></p>
+        <h1 id="tempID" class="text-dark h1 fw-bolder display-1"></h1>
+
+      </div>
+      </div>
+  </div>
+  {{!-- javascript code  --}}
+  <script src="./assets/js/app.js"></script>
+</main>
+
+
+{{>footer}}
